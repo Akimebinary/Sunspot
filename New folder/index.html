@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLARIS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="extra-styles.css"> <!-- Linking the extra styles -->
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="title">SOLARIS</h1>
+            <div class="about-dropdown">
+                <span class="about-trigger">About</span> <!-- Wrapping "About" text in a span for hover effect -->
+                <div class="about-content">
+                    
+"SOLARIS: Sunspot Observation and Analysis System is a sophisticated software tool crafted for the measurement and analysis of sunspots solely through image-based data.
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <input type="file" id="fileInput" accept="image/*">
+            <br>
+            <canvas id="outputCanvas" class="output-canvas"></canvas>
+
+            <div id="pixelCounts" class="pixel-counts"></div>
+
+            <!-- Input field for per-pixel multiplier -->
+            <div class="input-wrapper">
+                <label for="perPixelMultiplier" class="input-label">Per-Pixel Multiplier:</label>
+                <input type="number" id="perPixelMultiplier" class="input-field" value="1"> <!-- Default value is 1 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="blackAndWhiteConverter.js"></script>
+    <script src="cornerEffect.js"></script>
+    <script src="script.js"></script>
+    <script src="pixels.js"></script>
+</body>
+</html>
